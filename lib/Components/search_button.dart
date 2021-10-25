@@ -3,14 +3,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class SearchButton extends StatelessWidget {
+  final String text;
   const SearchButton({
-    Key? key,
+    Key? key, required this.text,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 90),
+      padding: const EdgeInsets.only(top: 70),
       child: Container(
         height: 50,
         margin: EdgeInsets.symmetric(horizontal: 40),
@@ -19,7 +20,7 @@ class SearchButton extends StatelessWidget {
           decoration: InputDecoration(
               fillColor: Colors.white,
               filled: true,
-              hintText: 'Search Doctor',
+              hintText: text,
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(25)),
               ),
